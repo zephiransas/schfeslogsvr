@@ -1,0 +1,10 @@
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/schfeslog
+    username: schfeslog
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
