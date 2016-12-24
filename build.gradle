@@ -47,8 +47,13 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile "org.flywaydb:flyway-core:${flywayCoreVersion}"
+	compile 'org.webjars:bootstrap:3.3.7'
 	provided "org.projectlombok:lombok:${lombokVersion}"
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+bootRun {
+	addResources = true
 }

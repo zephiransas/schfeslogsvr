@@ -1,9 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>schfeslog</title>
+  <link rel='stylesheet' href='/webjars/bootstrap/3.3.7/css/bootstrap.min.css'/>
 </head>
 <body>
+  <div class="container">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>プレイ日時</th>
+        <th>曲名</th>
+        <th>スコア</th>
+        <th>MAX COMBO</th>
+        <th>PREFECT</th>
+        <th>GREAT</th>
+        <th>GOOD</th>
+        <th>BAD</th>
+        <th>MISS</th>
+      </tr>
+      </thead>
 
+      <tbody>
+      <tr th:each="result : ${results}" th:inline="text">
+        <td>[[${#dates.format(result.createdAt, 'yyyy/MM/dd HH:mm')}]]</td>
+        <td>[[${result.songName}]]</td>
+        <td>[[${result.score}]]</td>
+        <td>[[${result.maxCombo}]]</td>
+        <td>[[${result.prefect}]]</td>
+        <td>[[${result.great}]]</td>
+        <td>[[${result.good}]]</td>
+        <td>[[${result.bad}]]</td>
+        <td>[[${result.miss}]]</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 </body>
