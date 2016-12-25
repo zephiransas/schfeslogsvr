@@ -11,6 +11,9 @@ schfeslogから送信されたプレイデータを受信して保存します�
 上記で受信したプレイ結果を一覧で見ることができます。
 
 # 利用方法
+
+## サーバ側の準備
+
 1.当リポジトリをgit cloneします。
 
 ``` bash 
@@ -22,15 +25,24 @@ cd schfeslogsvr
 
 ```
 heroku create
+heroku config:add TZ=Asia/Tokyo
 ```
 
-3.Herokuにデプロイします。
+3.データベースを追加します
+
+``` bash
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+4.Herokuにデプロイします。
 
 ``` bash 
 git push heroku master
 ```
 
-4.schfeslogをgit cloneします。
+## schfeslogの準備
+
+1.schfeslogをgit cloneします。
 
 ※サーバ連携機能はまだ本家にマージされていません
 
@@ -41,29 +53,29 @@ cd schfeslog
 git checkout feature-log-server
 ```
 
-5.settings.jsonを設定します。
+2.settings.jsonを設定します。
 
 settings.jsonに
 ``` json
 "server": {
     "on": true,
-    "uri": "https://[3でデプロイしたアプリのドメイン]/live/result"
+    "uri": "https://[4でデプロイしたアプリのドメイン]/live/result"
 }
 ```
 を設定します。
 
-6.schfeslogを起動します。
+3.schfeslogを起動します。
 
 ``` bash
 node main.js
 ```
 
-7.スマートフォンのプロキシを設定。
+4.スマートフォンのプロキシを設定。
 スマートフォンのWiFi設定からプロキシに
 - サーバ - schfeslogを起動しているマシンのIP
 - ポート - デフォルトのままなら25252ポート
 を設定します。
 
-8.スクフェスをプレイ！
+5.スクフェスをプレイ！
 
 スクフェスを通常どおりプレイして https://[3でデプロイしたアプリのドメイン] に結果が表示されれば、正しく送信できています。
