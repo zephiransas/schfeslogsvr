@@ -25,7 +25,7 @@ public class LiveController {
                 .songName(result.getSongName())
                 .score(result.getScore())
                 .maxCombo(result.getMaxCombo())
-                .prefect(result.getPrefect())
+                .perfect(result.getPerfect())
                 .great(result.getGreat())
                 .good(result.getGood())
                 .bad(result.getBad())

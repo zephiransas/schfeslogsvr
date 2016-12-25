@@ -31,7 +31,7 @@ public class LiveResult {
     @Column(name = "max_combo")
     private int maxCombo;
 
-    private int prefect;
+    private int perfect;
 
     private int great;
 
