@@ -18,7 +18,7 @@ public class LiveResultBean implements Serializable {
 
     private int maxCombo;
 
-    private int prefect;
+    private int perfect;
 
     private int great;
 
