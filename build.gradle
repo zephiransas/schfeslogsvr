@@ -19,6 +19,7 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: "org.flywaydb.flyway"
 
@@ -40,6 +41,12 @@ configurations {
 sourceSets {
 	main.compileClasspath += configurations.provided
 	test.compileClasspath += configurations.provided
+}
+
+idea {
+	module {
+		scopes.PROVIDED.plus += [configurations.provided]
+	}
 }
 
 dependencies {
