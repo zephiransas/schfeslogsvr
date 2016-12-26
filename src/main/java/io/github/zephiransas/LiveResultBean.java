@@ -1,12 +1,14 @@
 package io.github.zephiransas;
 
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @ToString
 public class LiveResultBean implements Serializable {
 
