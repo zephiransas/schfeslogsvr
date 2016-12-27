@@ -1,0 +1,15 @@
+{
+  "name": "School idol Festival Log Server",
+  "description": "A log sevver for schfeslog",
+  "repository": "https://github.com/zephiransas/schfeslogsvr",
+  "env": {
+    "TZ": {
+      "description": "Application time zone.",
+      "value": "Asia/Tokyo"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "keywords": ["java"]
+}
