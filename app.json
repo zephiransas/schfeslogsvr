@@ -1,6 +1,6 @@
 {
-  "name": "School idol Festival Log Server",
-  "description": "A log sevver for schfeslog",
+  "name": "schfeslog Log Server",
+  "description": "A log server for schfeslog",
   "repository": "https://github.com/zephiransas/schfeslogsvr",
   "env": {
     "TZ": {
