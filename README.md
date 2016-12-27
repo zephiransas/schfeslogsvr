@@ -14,31 +14,9 @@ schfeslogから送信されたプレイデータを受信して保存します�
 
 ## サーバ側の準備
 
-1.当リポジトリをgit cloneします。
+このボタンからサーバをHerokuにDeployできます。
 
-``` bash 
-git clone git@github.com:zephiransas/schfeslogsvr.git
-cd schfeslogsvr
-```
-
-2.デプロイするHerokuアプリを作成します。
-
-```
-heroku create
-heroku config:add TZ=Asia/Tokyo
-```
-
-3.データベースを追加します
-
-``` bash
-heroku addons:create heroku-postgresql:hobby-dev
-```
-
-4.Herokuにデプロイします。
-
-``` bash 
-git push heroku master
-```
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zephiransas/schfeslogsvr/tree/master)
 
 ## schfeslogの準備
 
