@@ -18,6 +18,8 @@ schfeslogから送信されたプレイデータを受信して保存します�
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zephiransas/schfeslogsvr/tree/master)
 
+deploy時にパスワードを設定してください。**ここで指定したパスワードはschfeslogで設定する必要があります。**
+
 ## schfeslogの準備
 
 1.schfeslogをgit cloneします。
@@ -37,7 +39,8 @@ settings.jsonに
 ``` json
 "server": {
     "on": true,
-    "uri": "https://[herokuにデプロイしたアプリのドメイン]/live/result"
+    "uri": "https://[Herokuにデプロイしたアプリのドメイン]/live/result",
+    "password": "[Heroku Deploy時に設定したパスワード]"
 }
 ```
 を設定します。
