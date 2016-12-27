@@ -43,6 +43,7 @@ public class LiveControllerTest {
         ObjectMapper mapper = new ObjectMapper();
 
         LiveResultBean bean = LiveResultBean.builder()
+                .password("password")
                 .songId(100)
                 .songName("青空Jumping Heart")
                 .score(12345)
@@ -73,6 +74,32 @@ public class LiveControllerTest {
         assertThat(actual.getGood(), is(3));
         assertThat(actual.getBad(), is(4));
         assertThat(actual.getMiss(), is(5));
+    }
+
+    @Test
+    public void illegalPassword() throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+
+        LiveResultBean bean = LiveResultBean.builder()
+                .password("XXXXX")
+                .songId(100)
+                .songName("青空Jumping Heart")
+                .score(12345)
+                .maxCombo(123)
+                .perfect(1)
+                .great(2)
+                .good(3)
+                .bad(4)
+                .miss(5)
+                .build();
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .post("/live/result")
+                .content(mapper.writeValueAsString(bean))
+                .contentType(MediaType.APPLICATION_JSON);
+
+        mvc.perform(request)
+                .andExpect(status().isForbidden());
     }
 
 }

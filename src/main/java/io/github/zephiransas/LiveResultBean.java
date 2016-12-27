@@ -12,6 +12,8 @@ import java.io.Serializable;
 @ToString
 public class LiveResultBean implements Serializable {
 
+    private String password;
+
     private int songId;
 
     private String songName;
