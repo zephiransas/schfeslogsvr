@@ -6,6 +6,10 @@
     "TZ": {
       "description": "Application time zone.",
       "value": "Asia/Tokyo"
+    },
+    "PASSWORD": {
+      "description": "password for schfeslog",
+      "required": true
     }
   },
   "addons": [

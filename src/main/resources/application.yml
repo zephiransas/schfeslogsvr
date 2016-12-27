@@ -6,3 +6,4 @@ spring:
     url: ${JDBC_DATABASE_URL}
     driverClassName: org.postgresql.Driver
     initialize: false
+password: ${PASSWORD}
