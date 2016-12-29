@@ -24,13 +24,10 @@ deploy時にパスワードを設定してください。**ここで指定した
 
 1.schfeslogをgit cloneします。
 
-※サーバ連携機能はまだ本家にマージされていません
-
 ``` bash
 cd ~
-git clone git@github.com:zephiransas/schfeslog.git
+git clone git@github.com:hideo54/schfeslog.git
 cd schfeslog
-git checkout feature-log-server
 ```
 
 2.settings.jsonを設定します。
