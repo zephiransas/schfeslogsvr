@@ -35,9 +35,9 @@ cd schfeslog
 settings.jsonに
 ``` json
 "server": {
-    "on": true,
-    "uri": "https://[Herokuにデプロイしたアプリのドメイン]/live/result",
-    "password": "[Heroku Deploy時に設定したパスワード]"
+  "on": true,
+  "uri": "https://[Herokuにデプロイしたアプリのドメイン]/live/result",
+  "password": "[Heroku Deploy時に設定したパスワード]"
 }
 ```
 を設定します。
