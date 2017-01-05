@@ -18,7 +18,7 @@ public class LiveResult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "song_id")
     private int songId;
@@ -42,6 +42,7 @@ public class LiveResult {
     private int miss;
 
     @Column(name = "created_at", insertable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
 }
