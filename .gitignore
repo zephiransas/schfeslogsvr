@@ -6,6 +6,8 @@ classes
 out
 
 npm-debug.log
+node_modules
+src/main/resources/static/*
 
 ### STS ###
 .apt_generated
