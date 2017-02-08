@@ -5,6 +5,8 @@
 classes
 out
 
+npm-debug.log
+
 ### STS ###
 .apt_generated
 .classpath
